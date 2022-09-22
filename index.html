@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('0e41f2998a13acbc8253414ad05a9e68');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '지훈과 주희, 결혼합니다.',
+        description: '',
+        imageUrl:
+          'https://blogfiles.pstatic.net/MjAyMjA5MjJfMTcy/MDAxNjYzODM1OTk2MzQ0.IMPOl9zYLUrv_qLwb1bYppSg-ipAoLLSZMGebKES0V0g.94qwRurwTRdni8MK2zn7IPW0hbK6TzJ4zmkv6VSwHi0g.JPEG.abobooks/KakaoTalk_Moim_5cEUzwFcFgMEdghavtLzYl9CVn7m7z.jpg?type=w1',
+        link: {
+          mobileWebUrl: 'https://jhjhmarry.quv.kr',
+          webUrl: 'ttps://jhjhmarry.quv.kr',
+        },
+      },
+      social: {
+        likeCount: 99999, //99999가 최대입니다
+        commentCount: 99999, //99999가 최대입니다
+        sharedCount: 99999, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '축하하기',
+          link: {
+            mobileWebUrl: 'https://jhjhmarry.quv.kr',
+            webUrl: 'https://jhjhmarry.quv.kr',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
